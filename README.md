@@ -120,7 +120,7 @@ llm2025/
 ### 1. リポジトリのクローン
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/llm2025.git
+git clone https://github.com/MasahitoKumada/llm2025.git
 cd llm2025
 ```
 
