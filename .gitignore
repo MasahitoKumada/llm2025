@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Data files (large files - not tracked in git)
+inputs/
+outputs/
+test_data/
+
+# Parquet files
+*.parquet
+
+# Large JSON/JSONL files
+*.jsonl
+
+# Keep specific JSON files needed for the apps
+!inference-comparator/public_150.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

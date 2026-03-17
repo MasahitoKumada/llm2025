@@ -1,0 +1,317 @@
+======================================================================
+詳細分析: v3戦略のためのデータ増減検討
+======================================================================
+
+======================================================================
+1. 各SFTデータセットの詳細分析
+======================================================================
+
+■ 1-1_512_v2 (3933 件)
+  タスクタイプ分布:
+    Unknown: 2290
+    JSON to XML: 996
+    YAML to TOML: 64
+    YAML to XML: 61
+    CSV to JSON: 55
+    JSON to YAML: 55
+    XML to TOML: 53
+    JSON to TOML: 52
+    CSV to XML: 51
+    CSV to YAML: 50
+    CSV to TOML: 48
+    TEXT to YAML: 32
+    TEXT to JSON: 32
+    TEXT to XML: 32
+    TEXT to TOML: 32
+    TEXT to CSV: 30
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 1-2_512_v4 (4608 件)
+  タスクタイプ分布:
+    Unknown: 2571
+    CSV to JSON: 225
+    CSV to YAML: 213
+    XML to TOML: 212
+    JSON to XML: 205
+    CSV to TOML: 202
+    JSON to YAML: 201
+    YAML to TOML: 198
+    CSV to XML: 195
+    YAML to XML: 195
+    JSON to TOML: 191
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 1-3_512_v5 (4547 件)
+  タスクタイプ分布:
+    Unknown: 2523
+    JSON to YAML: 214
+    CSV to TOML: 210
+    XML to TOML: 210
+    YAML to XML: 210
+    CSV to XML: 204
+    JSON to XML: 201
+    CSV to YAML: 199
+    JSON to TOML: 195
+    YAML to TOML: 186
+    CSV to JSON: 179
+    TEXT to JSON: 4
+    TEXT to CSV: 4
+    TEXT to YAML: 3
+    TEXT to TOML: 3
+    TEXT to XML: 2
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 1-4_512 (3445 件)
+  タスクタイプ分布:
+    Unknown: 2264
+    JSON to XML: 343
+    JSON to YAML: 342
+    YAML to XML: 161
+    CSV to JSON: 154
+    TEXT to CSV: 41
+    TEXT to JSON: 35
+    TEXT to XML: 35
+    TEXT to TOML: 35
+    TEXT to YAML: 35
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 1-5_v2 (2500 件)
+  タスクタイプ分布:
+    Unknown: 2309
+    TEXT to CSV: 59
+    TEXT to YAML: 33
+    TEXT to TOML: 33
+    TEXT to XML: 33
+    TEXT to JSON: 33
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 1-6_base (2500 件)
+  タスクタイプ分布:
+    Unknown: 2316
+    TEXT to CSV: 52
+    TEXT to JSON: 33
+    TEXT to XML: 33
+    TEXT to TOML: 33
+    TEXT to YAML: 33
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 2-1_3k_mix (3000 件)
+  タスクタイプ分布:
+    JSON to TOML: 720
+    CSV to XML: 450
+    JSON to XML: 420
+    CSV to JSON: 270
+    JSON to YAML: 220
+    TEXT to YAML: 200
+    YAML to XML: 200
+    CSV to YAML: 200
+    TEXT to CSV: 150
+    TEXT to JSON: 120
+    YAML to TOML: 50
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 2-2_5k_mix (5000 件)
+  タスクタイプ分布:
+    JSON to TOML: 1600
+    CSV to XML: 625
+    JSON to XML: 600
+    YAML to XML: 400
+    JSON to YAML: 400
+    TEXT to YAML: 400
+    CSV to YAML: 325
+    CSV to JSON: 225
+    YAML to TOML: 200
+    TEXT to CSV: 125
+    TEXT to JSON: 100
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ 2-3_hard_4k (4000 件)
+  タスクタイプ分布:
+    JSON to XML: 1000
+    YAML to XML: 1000
+    JSON to TOML: 1000
+    TEXT to YAML: 1000
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+■ v3_merged (8541 件)
+  タスクタイプ分布:
+    Unknown: 4861
+    JSON to XML: 1201
+    CSV to JSON: 280
+    XML to TOML: 265
+    CSV to YAML: 263
+    YAML to TOML: 262
+    YAML to XML: 256
+    JSON to YAML: 256
+    CSV to TOML: 250
+    CSV to XML: 246
+    JSON to TOML: 243
+    TEXT to YAML: 32
+    TEXT to JSON: 32
+    TEXT to XML: 32
+    TEXT to TOML: 32
+    TEXT to CSV: 30
+  問題パターン:
+    コードブロック: 0
+    説明テキスト: 0
+
+======================================================================
+2. テストデータ vs SFTデータ タスク分布比較
+======================================================================
+
+■ カバレッジ分析（テストデータのタスクがSFTでどれだけカバーされているか）
+----------------------------------------------------------------------
+タスク名                | テスト | SFT    | 比率
+----------------------------------------------------------------------
+JSON to CSV            |      4 |      0 |      0.0
+TOML to JSON           |     11 |      0 |      0.0
+TOML to YAML           |      8 |      0 |      0.0
+Text to CSV            |      6 |      0 |      0.0
+Text to JSON           |      2 |      0 |      0.0
+Text to TOML           |     25 |      0 |      0.0
+Text to XML            |      6 |      0 |      0.0
+Text to YAML           |      1 |      0 |      0.0
+XML to CSV             |      5 |      0 |      0.0
+XML to JSON            |     13 |      0 |      0.0
+XML to YAML            |      6 |      0 |      0.0
+YAML to CSV            |      5 |      0 |      0.0
+YAML to JSON           |     10 |      0 |      0.0
+CSV to JSON            |     14 |   1388 |     99.1
+JSON to YAML           |     14 |   1688 |    120.6
+CSV to YAML            |      6 |   1250 |    208.3
+YAML to XML            |      5 |   2483 |    496.6
+CSV to XML             |      3 |   1771 |    590.3
+JSON to XML            |      6 |   4966 |    827.7
+CSV to TOML            |      0 |    710 |        ∞
+JSON to TOML           |      0 |   4001 |        ∞
+TEXT to CSV            |      0 |    491 |        ∞
+TEXT to JSON           |      0 |    389 |        ∞
+TEXT to TOML           |      0 |    168 |        ∞
+TEXT to XML            |      0 |    167 |        ∞
+TEXT to YAML           |      0 |   1768 |        ∞
+Unknown                |      0 |  19134 |        ∞
+XML to TOML            |      0 |    740 |        ∞
+YAML to TOML           |      0 |    960 |        ∞
+
+======================================================================
+3. 両バージョンで問題があるケースの詳細
+======================================================================
+
+両バージョンで問題があるケース: 9 件
+
+■ 問題ケースのタスク名分布:
+  CSV to YAML: 4 件
+  CSV to XML: 2 件
+  YAML to XML: 2 件
+  CSV to JSON: 1 件
+
+■ 問題ケースのサンプル（最大5件）:
+
+--- ケース 1 ---
+  task_id: p_c87a53349ae753c688be5341
+  task_name: CSV to JSON
+  output_type: JSON
+  query_preview: Please convert the following CSV code to JSON code.\n\n<code>animal_id,species,profile.name,profile....
+
+--- ケース 2 ---
+  task_id: p_a59515e3e22b36c40cb41edf
+  task_name: CSV to YAML
+  output_type: YAML
+  query_preview: Please convert the following CSV code to YAML code.\n\n<code>planet.name,planet.type,planet.discover...
+
+--- ケース 3 ---
+  task_id: p_7672a706937ab79a46bc7020
+  task_name: CSV to YAML
+  output_type: YAML
+  query_preview: Please convert the following CSV code to YAML code.\n\n<code>planet_name,system.star_name,system.dis...
+
+--- ケース 4 ---
+  task_id: p_f47650f56e7ae77b6a87194c
+  task_name: CSV to YAML
+  output_type: YAML
+  query_preview: Please convert the following CSV code to YAML code.\n\n<code>galaxy.name,galaxy.type,galaxy.distance...
+
+--- ケース 5 ---
+  task_id: p_bb2dd7b7764bfd292a9d1430
+  task_name: CSV to YAML
+  output_type: YAML
+  query_preview: Please convert the following CSV code to YAML code.\n\n<code>planet_name,system.star_name,system.dis...
+
+======================================================================
+4. v3戦略: 具体的なデータ増減提案
+======================================================================
+
+■ 【増やすべきタスク】（テスト比率が低い）
+  JSON to CSV:
+    現状: テスト 4件, SFT 0件 (比率 0.0)
+    推奨: +200件 追加して比率50以上に
+  TOML to JSON:
+    現状: テスト 11件, SFT 0件 (比率 0.0)
+    推奨: +550件 追加して比率50以上に
+  TOML to YAML:
+    現状: テスト 8件, SFT 0件 (比率 0.0)
+    推奨: +400件 追加して比率50以上に
+  Text to CSV:
+    現状: テスト 6件, SFT 0件 (比率 0.0)
+    推奨: +300件 追加して比率50以上に
+  Text to JSON:
+    現状: テスト 2件, SFT 0件 (比率 0.0)
+    推奨: +100件 追加して比率50以上に
+  Text to TOML:
+    現状: テスト 25件, SFT 0件 (比率 0.0)
+    推奨: +1250件 追加して比率50以上に
+  Text to XML:
+    現状: テスト 6件, SFT 0件 (比率 0.0)
+    推奨: +300件 追加して比率50以上に
+  Text to YAML:
+    現状: テスト 1件, SFT 0件 (比率 0.0)
+    推奨: +50件 追加して比率50以上に
+  XML to CSV:
+    現状: テスト 5件, SFT 0件 (比率 0.0)
+    推奨: +250件 追加して比率50以上に
+  XML to JSON:
+    現状: テスト 13件, SFT 0件 (比率 0.0)
+    推奨: +650件 追加して比率50以上に
+  XML to YAML:
+    現状: テスト 6件, SFT 0件 (比率 0.0)
+    推奨: +300件 追加して比率50以上に
+  YAML to CSV:
+    現状: テスト 5件, SFT 0件 (比率 0.0)
+    推奨: +250件 追加して比率50以上に
+  YAML to JSON:
+    現状: テスト 10件, SFT 0件 (比率 0.0)
+    推奨: +500件 追加して比率50以上に
+
+■ 【減らす/品質改善すべきタスク】
+  - コードブロック(```)を含む訓練データの修正
+  - 説明テキスト(Here's, Let me)を含む訓練データの修正
+  - 過剰なタスクタイプの削減（特にUnknown）
+
+■ 【優先度の高い改善アクション】
+  1. CSV to XML: v2で悪化（2件）→ 訓練データの品質確認
+  2. CSV to YAML: 両方悪い（2件）→ 訓練データ追加/修正
+  3. YAML to XML: 両方悪い（1件）→ 訓練データ追加/修正
+  4. Text to TOML: テスト25件と多い → 十分な訓練データ確保
+  5. 全体的にコードブロックと説明テキストを除去
+
+======================================================================
+詳細分析完了
+======================================================================

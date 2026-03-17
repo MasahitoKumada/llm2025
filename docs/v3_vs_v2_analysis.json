@@ -1,0 +1,26 @@
+{
+  "scores": {
+    "v0": 0.69426,
+    "v1": 0.59555,
+    "v2": 0.75074,
+    "v3": 0.72586
+  },
+  "v2_issues_count": {
+    "markdown_wrapped": 9,
+    "explanation_included": 5
+  },
+  "v3_issues_count": {
+    "markdown_wrapped": 2,
+    "explanation_included": 1
+  },
+  "regression_count": 1,
+  "improvement_count": 7,
+  "regression_by_task": {
+    "CSV to JSON": 1
+  },
+  "avg_output_length": {
+    "v2": 755.98,
+    "v3": 791.0333333333333,
+    "diff": 35.053333333333335
+  }
+}

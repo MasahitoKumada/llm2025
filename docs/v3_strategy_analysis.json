@@ -1,0 +1,295 @@
+{
+  "test_info": {
+    "total": 150,
+    "task_names": {
+      "Text to JSON": 2,
+      "CSV to JSON": 14,
+      "TOML to JSON": 11,
+      "XML to JSON": 13,
+      "YAML to JSON": 10,
+      "Text to YAML": 1,
+      "CSV to YAML": 6,
+      "JSON to YAML": 14,
+      "TOML to YAML": 8,
+      "XML to YAML": 6,
+      "Text to TOML": 25,
+      "Text to XML": 6,
+      "CSV to XML": 3,
+      "JSON to XML": 6,
+      "YAML to XML": 5,
+      "Text to CSV": 6,
+      "JSON to CSV": 4,
+      "XML to CSV": 5,
+      "YAML to CSV": 5
+    },
+    "output_types": {
+      "JSON": 50,
+      "YAML": 35,
+      "TOML": 25,
+      "XML": 20,
+      "CSV": 20
+    },
+    "rendering": {
+      "False": 150
+    }
+  },
+  "test_patterns": {
+    "conversion_count": 150,
+    "generation_count": 40,
+    "nested_count": 71,
+    "array_count": 25
+  },
+  "sft_datasets": {
+    "2-3_hard_4k": {
+      "count": 4000,
+      "formats": {
+        "C_XML": 2000,
+        "C_TOML": 1000,
+        "C_YAML": 1000
+      },
+      "task_types": {
+        "json_to_xml": 1000,
+        "xml_to_yaml": 1000,
+        "text_to_toml": 1000,
+        "text_to_yaml": 1000
+      },
+      "complexity_levels": {},
+      "avg_response_length": 1090.90975
+    },
+    "1-1_512_v2": {
+      "count": 3933,
+      "formats": {
+        "toml": 611,
+        "csv": 547,
+        "xml": 1076,
+        "json": 1075,
+        "yaml": 624
+      },
+      "task_types": {
+        "conversion": 1485,
+        "generation": 2448
+      },
+      "complexity_levels": {
+        "medium": 1637,
+        "complex": 1533,
+        "simple": 763
+      },
+      "avg_response_length": 841.8494787693872
+    },
+    "2-2_5k_mix": {
+      "count": 5000,
+      "formats": {
+        "C_TOML": 1500,
+        "C_XML": 1400,
+        "C_CSV": 500,
+        "C_YAML": 1100,
+        "C_JSON": 500
+      },
+      "task_types": {
+        "text_to_toml": 1500,
+        "csv_to_xml": 500,
+        "json_to_xml": 500,
+        "xml_to_yaml": 400,
+        "json_to_csv": 125,
+        "json_to_yaml": 300,
+        "toml_to_yaml": 200,
+        "csv_to_yaml": 200,
+        "csv_to_json": 100,
+        "text_to_csv": 125,
+        "text_to_json": 100,
+        "toml_to_json": 100,
+        "yaml_to_json": 100,
+        "text_to_yaml": 400,
+        "xml_to_json": 100,
+        "yaml_to_csv": 125,
+        "xml_to_csv": 125
+      },
+      "complexity_levels": {},
+      "avg_response_length": 1168.2646
+    },
+    "1-5_v2": {
+      "count": 2500,
+      "formats": {
+        "toml": 500,
+        "json": 500,
+        "csv": 500,
+        "yaml": 500,
+        "xml": 500
+      },
+      "task_types": {
+        "unknown": 2500
+      },
+      "complexity_levels": {
+        "complex": 1040,
+        "medium": 990,
+        "simple": 470
+      },
+      "avg_response_length": 864.388
+    },
+    "1-3_512_v5": {
+      "count": 4547,
+      "formats": {
+        "json": 908,
+        "toml": 908,
+        "csv": 914,
+        "yaml": 934,
+        "xml": 883
+      },
+      "task_types": {
+        "conversion": 2008,
+        "generation": 2539
+      },
+      "complexity_levels": {
+        "medium": 1923,
+        "complex": 1738,
+        "simple": 886
+      },
+      "avg_response_length": 887.7479656916648
+    },
+    "1-4_512": {
+      "count": 3445,
+      "formats": {
+        "json": 1000,
+        "csv": 445,
+        "yaml": 831,
+        "xml": 669,
+        "toml": 500
+      },
+      "task_types": {
+        "conversion": 1000,
+        "generation": 2445
+      },
+      "complexity_levels": {
+        "complex": 1386,
+        "medium": 1399,
+        "simple": 660
+      },
+      "avg_response_length": 815.277793904209
+    },
+    "2-1_3k_mix": {
+      "count": 3000,
+      "formats": {
+        "C_TOML": 600,
+        "C_CSV": 600,
+        "C_YAML": 400,
+        "C_XML": 800,
+        "C_JSON": 600
+      },
+      "task_types": {
+        "text_to_toml": 600,
+        "text_to_csv": 150,
+        "text_to_yaml": 200,
+        "xml_to_csv": 150,
+        "xml_to_yaml": 200,
+        "yaml_to_json": 120,
+        "csv_to_xml": 300,
+        "text_to_json": 120,
+        "json_to_csv": 150,
+        "csv_to_json": 120,
+        "json_to_xml": 300,
+        "yaml_to_csv": 150,
+        "json_to_yaml": 100,
+        "xml_to_json": 120,
+        "toml_to_json": 120,
+        "toml_to_yaml": 50,
+        "csv_to_yaml": 50
+      },
+      "complexity_levels": {},
+      "avg_response_length": 1286.7933333333333
+    },
+    "1-6_base": {
+      "count": 2500,
+      "formats": {
+        "json": 500,
+        "xml": 500,
+        "csv": 500,
+        "yaml": 500,
+        "toml": 500
+      },
+      "task_types": {
+        "unknown": 2500
+      },
+      "complexity_levels": {
+        "medium": 1010,
+        "simple": 995,
+        "complex": 495
+      },
+      "avg_response_length": 747.8964
+    },
+    "1-2_512_v4": {
+      "count": 4608,
+      "formats": {
+        "xml": 921,
+        "yaml": 934,
+        "json": 912,
+        "csv": 934,
+        "toml": 907
+      },
+      "task_types": {
+        "conversion": 2037,
+        "generation": 2571
+      },
+      "complexity_levels": {
+        "complex": 1841,
+        "simple": 801,
+        "medium": 1966
+      },
+      "avg_response_length": 871.9385850694445
+    }
+  },
+  "quality_issues": {
+    "inference_v1": {
+      "markdown_wrapped": 0,
+      "explanation_included": 0,
+      "parse_errors": 0,
+      "empty_responses": 0,
+      "format_mismatch": 0
+    },
+    "inference_v0": {
+      "markdown_wrapped": 62,
+      "explanation_included": 27,
+      "parse_errors": 0,
+      "empty_responses": 0,
+      "format_mismatch": 0
+    },
+    "inference_v2": {
+      "markdown_wrapped": 9,
+      "explanation_included": 5,
+      "parse_errors": 0,
+      "empty_responses": 0,
+      "format_mismatch": 0
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "INCREASE",
+      "target": "CSV to JSON変換データ",
+      "reason": "14件のCSV→JSON変換タスクが存在"
+    },
+    {
+      "priority": "HIGH",
+      "action": "INCREASE",
+      "target": "Feature Requirements付きText to JSONデータ",
+      "reason": "40件のFeature Requirements付きタスクが存在"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "INCREASE",
+      "target": "深いネスト構造のデータ",
+      "reason": "71件の複雑なネスト構造"
+    },
+    {
+      "priority": "HIGH",
+      "action": "MODIFY",
+      "target": "マークダウン囲みなしの純粋な出力",
+      "reason": "inference_v0で62件のマークダウン囲み問題"
+    },
+    {
+      "priority": "HIGH",
+      "action": "MODIFY",
+      "target": "説明文なしの純粋な出力",
+      "reason": "inference_v0で27件の説明文混入問題"
+    }
+  ]
+}
